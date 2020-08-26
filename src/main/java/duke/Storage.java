@@ -53,7 +53,7 @@ public class Storage {
         if (info.length < 3) {
             throw new InvalidDataException();
         }
-        Boolean isComplete = info[1].equals("1");
+        boolean isComplete = info[1].equals("1");
         switch (info[0]) {
             case "T":
                 return new Todo(info[2], isComplete);
@@ -67,7 +67,7 @@ public class Storage {
     }
 
     public void writeData(ArrayList<Task> items) throws IOException {
-        Boolean directoryExists = Files.exists(DIR);
+        boolean directoryExists = Files.exists(DIR);
 
         if (!directoryExists) {
             Files.createDirectory(DIR);
@@ -86,7 +86,7 @@ public class Storage {
     }
 
     public ArrayList<Task> readData() {
-        Boolean pathExists = Files.exists(PATH);
+        boolean pathExists = Files.exists(PATH);
 
         ArrayList<Task> res = new ArrayList<>();
 

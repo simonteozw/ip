@@ -31,7 +31,7 @@ public class DateTime {
      * @param date Input date.
      * @return A boolean to show whether the input date is valid.
      */
-    public static Boolean isValidFormat(String date) {
+    public static boolean isValidFormat(String date) {
         try {
             FORMATTER.parse(date);
         } catch (DateTimeParseException e) {
