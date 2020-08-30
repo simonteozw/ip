@@ -9,8 +9,10 @@ import java.time.format.DateTimeParseException;
  */
 public class DateTime {
     private LocalDate date = LocalDate.now();
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private final String INVALID_DATE_MESSAGE = "Your Date must be in the format yyyy-MM-dd. Initialising date to Today!";
+    private final static DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+    private final String INVALID_DATE_MESSAGE = "Your Date must be in the format yyyy-MM-dd."
+            +
+            " Initialising date to Today!";
 
     /**
      * Constructor for the DateTime class.
