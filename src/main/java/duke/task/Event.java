@@ -5,6 +5,7 @@ package duke.task;
  */
 public class Event extends Task {
     static final String SYMBOL = "E";
+    public static final String FORMAT = "event [^ ]+.+[^ ]+ /at [^ ]+.+";
     private DateTime time;
 
     /**
@@ -36,9 +37,9 @@ public class Event extends Task {
      * @return A string to that can be saved into the .txt file
      */
     @Override
-    public String saveString() {
+    public String getSaveString() {
         int completeSymbol = this.complete ? 1 : 0;
-        return String.format("%s|%d|%s|%s", SYMBOL, completeSymbol, this.title, this.time.saveString());
+        return String.format("%s|%d|%s|%s", SYMBOL, completeSymbol, this.title, this.time.getSaveString());
     }
 
     /**
